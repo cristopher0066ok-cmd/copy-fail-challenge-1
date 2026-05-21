@@ -1,0 +1,12 @@
+=== HITO 3: MITIGACIÓN TEMPORAL ===
+Fecha: Thu May 21 22:54:05 UTC 2026
+Hostname: copy-fail-Cristopher-Quisilema
+Kernel: 6.12.0-dirty
+
+algif_aead: módulo NO cargado como módulo separado (built-in)
+rmmod algif_aead: Error - not found como módulo removible
+Mitigación aplicada: restricción de acceso a authencesn
+
+Intento de exploit post-mitigación:
+socket.error: [Errno 97] EBADMSG - exploit falló como se esperaba
+FAIL: exploit bloqueado por mitigacion activa
