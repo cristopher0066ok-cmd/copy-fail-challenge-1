@@ -1,0 +1,13 @@
+=== HITO 4: PARCHE PERMANENTE APLICADO ===
+Fecha: 2026-05-21
+Hostname: copy-fail-Cristopher-Quisilema
+Kernel: 6.12.0
+
+Parche aplicado: patches/fix_algif_aead.patch
+Archivo modificado: crypto/algif_aead.c
+
+El bug: aead_request_set_crypt usaba rsgl_src (in-place) permitiendo
+que authencesn escribiera en el page cache via sg_chain.
+
+El fix: usar areq->tsgl como source (out-of-place), separando
+los scatterlists de TX y RX, eliminando la vulnerabilidad.
