@@ -58,9 +58,11 @@ scripts/config --enable UNIX
 scripts/config --enable INET
 # ── LA PIEZA CLAVE: API crypto expuesta a userspace ──────────────────────────
 scripts/config --enable CRYPTO
+scripts/config --enable CRYPTO_USER
 scripts/config --enable CRYPTO_USER_API        # AF_ALG base
 scripts/config --enable CRYPTO_USER_API_AEAD   # algif_aead  ← VULNERABLE
 scripts/config --enable CRYPTO_USER_API_SKCIPHER
+scripts/config --enable CRYPTO_USER_API_RNG
 scripts/config --enable CRYPTO_ALGIF_AEAD
 scripts/config --enable CRYPTO_AUTHENCESN      # el template que escribe de más
 scripts/config --enable CRYPTO_AES
