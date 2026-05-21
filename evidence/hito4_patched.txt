@@ -11,3 +11,6 @@ que authencesn escribiera en el page cache via sg_chain.
 
 El fix: usar areq->tsgl como source (out-of-place), separando
 los scatterlists de TX y RX, eliminando la vulnerabilidad.
+
+Identidad al aplicar parche: uid=0(root) gid=0(root)
+Kernel parcheado: 6.12.0-dirty
