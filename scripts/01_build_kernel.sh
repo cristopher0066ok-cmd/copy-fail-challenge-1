@@ -46,9 +46,11 @@ scripts/config --enable 64BIT
 scripts/config --enable SERIAL_8250
 scripts/config --enable SERIAL_8250_CONSOLE
 scripts/config --enable TTY
+scripts/config --enable UNIX98_PTYS
 # Sistema de archivos en memoria (initramfs)
 scripts/config --enable BLK_DEV_INITRD
-scripts/config --enable INITRAMFS_SOURCE
+scripts/config --set-str INITRAMFS_SOURCE ""
+scripts/config --enable SHMEM
 scripts/config --enable TMPFS
 # Módulo del socket de red (AF_UNIX, AF_ALG)
 scripts/config --enable NET
